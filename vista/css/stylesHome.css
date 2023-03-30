@@ -1,0 +1,28 @@
+.fixed-right{
+    position:fixed;
+    right:0;
+    z-index:0;
+    width: 20%;
+    top:15%;
+}
+
+.container-left{
+    position: relative;
+    width: 75%;
+}
+.not-fixed-bottom{
+    position:relative;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1030;
+}
+.div-hijo{
+    margin: 0 auto 10px auto;
+    width: min-content;
+}
+.aside-Cupon{
+    height: 150px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
