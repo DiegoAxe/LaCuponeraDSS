@@ -11,13 +11,7 @@
       <p>
       En nuestra cuponera puedes poder ver muchas promociones disponibles que hay para difentes tiendas, restaurantes, domicilios y mucho más.
       Recuerda tambien de tener tu cuenta creada con nosotros para poder hacer acceder a todas las funciones que necesites si eres una empresa
-       o comprar los cupones que desees si eres un cliente. 
-       <?php
-        if(!isset($_SESSION["Rol"])){
-          echo '<a href="registro.php">CREAR UNA CUENTA</a>';
-        }
-       ?>
-       
+       o tambien si solo eres un cliente puedes crear tu cuenta aqui <a href="registro.php">CREAR UNA CUENTA</a>
       </p>
     </section>
     <!-- Section: Text -->
@@ -58,10 +52,10 @@
             <p>ML222762</p>
             </li>
             <li>
-            <p>MH222766</p>
+            <p>MA222700</p>
             </li>
             <li>
-            <p>MA222763</p>
+            <p>MA222700</p>
             </li>
             <li>
             <p>LT222760</p>
