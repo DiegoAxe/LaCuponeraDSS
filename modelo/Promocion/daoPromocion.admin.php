@@ -39,6 +39,17 @@
             return $promociones;
         }
 
+        public function mostrarAprobadas($id){
+            $sql = "SELECT * FROM promocion WHERE CodEmpresa=:id AND Estado IN('Activa', 'Pasada', 'Futura', 'Aprobada')";
+            $cn = new Conexion();
+            $dbh = $cn->getConexion();
+            $stmt = $dbh->prepare($sql);
+            $stmt->bindParam(':id',$id);
+            $stmt->execute();
+            $promociones = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $promociones;
+        }
+
         public function actualizarEstado($id, $estado){
             $cn = new Conexion();        
             $dbh = $cn->getConexion();
