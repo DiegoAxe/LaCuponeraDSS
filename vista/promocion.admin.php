@@ -13,7 +13,7 @@
     ?>
     
     <?php
-        $id = isset($_GET['promo'])?$_GET['promo']:"adsa1";
+        $id = isset($_GET['promo'])?$_GET['promo']:"1";
         require '../modelo/Empresa/empresa.class.admin.php';
         require '../modelo/Empresa/daoEmpresas.admin.php';
         require '../modelo/Promocion/daoPromocion.admin.php';
@@ -123,8 +123,11 @@
                                     case 'Aprobada':
                                         echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . $estado . "</h2>";
                                         break;
+                                    case 'Pasada':
+                                        echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                        break;
                                     default:
-                                        echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . $estado . "</h2>";
+                                        echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                         break;
                                 }
 
@@ -155,7 +158,9 @@
         </section>
         <?php
             }else{
-                if($promo['Estado']=="Aprobada" && $diasRestantes>=0){
+                if($promo['Estado']=="Aprobada" || $promo['Estado']=="Activa" 
+                    || $promo['Estado']=="Pasada" || $promo['Estado']=="Futura" || $promo['Estado']=="Aprobada"
+                 && $diasRestantes>=0){
         ?>
             <article class="d-flex justify-content-center row" >
             <section class="col-md-15" >

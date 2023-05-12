@@ -113,8 +113,11 @@
                                                 case 'Aprobada':
                                                     echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . "</h2>";
                                                     break;
+                                                case 'Pasada':
+                                                    echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                                    break;
                                                 default:
-                                                    echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . "</h2>";
+                                                    echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                                     break;
                                             }
         
@@ -157,7 +160,7 @@
                             $pasadas = array();
                             $activas = array();
                             $futuras = array();
-                            $promos = $daoPromocion->mostrarPromocionesCat($emP->getCodEmpresa(), "Aprobada");
+                            $promos = $daoPromocion->mostrarAprobadas($emP->getCodEmpresa());
                         
                             if(count($promos)>0){
                                 
@@ -220,8 +223,11 @@
                                             case 'Aprobada':
                                                 echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . "</h2>";
                                                 break;
+                                            case 'Pasada':
+                                                echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                                break;
                                             default:
-                                                echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . "</h2>";
+                                                echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                                 break;
                                         }
     
@@ -310,8 +316,11 @@
                                             case 'Aprobada':
                                                 echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . "</h2>";
                                                 break;
+                                            case 'Pasada':
+                                                echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                                break;
                                             default:
-                                                echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . "</h2>";
+                                                echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                                 break;
                                         }
     
@@ -396,8 +405,11 @@
                                             case 'Aprobada':
                                                 echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . "</h2>";
                                                 break;
+                                            case 'Pasada':
+                                                echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                                break;
                                             default:
-                                                echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . "</h2>";
+                                                echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                                 break;
                                         }
     
@@ -504,8 +516,11 @@
                                             case 'Aprobada':
                                                 echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . "</h2>";
                                                 break;
+                                            case 'Pasada':
+                                                echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                                break;
                                             default:
-                                                echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . "</h2>";
+                                                echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                                 break;
                                         }
     
@@ -584,8 +599,11 @@
                                             case 'Aprobada':
                                                 echo "<h2 class=\"alert alert-success \">" . $promo['Estado'] . "</h2>";
                                                 break;
+                                            case 'Pasada':
+                                                echo "<h2 class=\"alert alert-dark \">" . $promo['Estado'] . "</h2>";
+                                                break;
                                             default:
-                                                echo "<h2 class=\"alert alert-dark\">" . $promo['Estado'] . "</h2>";
+                                                echo "<h2 class=\"alert alert-success\">" . $promo['Estado'] . "</h2>";
                                                 break;
                                         }
     
