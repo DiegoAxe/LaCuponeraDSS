@@ -56,20 +56,29 @@ $promo = $daoPromocion->buscarPromo($id);
         </td>
         <td></td>
     </tr>
+
     <tr>
         <td colspan="5">
             <form action="pagar.php" method="post">
                 <div class="alert alert-success">
                     <div class="form-group">
-                        <label for="my-input">Correo de contacto:</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Escribe tu correo" required>
+                        <label for="my-input">Correo de contacto</label>
+                        <input type="email" id="email" name="email" class="form-control" value="<?=$_SESSION['Correo']?>" readonly placeholder="<?=$_SESSION['Correo']?>">
                     </div>
-                    <small id="emailHelp" class="form-text text-muted">Tus productos serán enviados a este correo</small>
+                    <small id="emailHelp"
+                    class="form-text text-muted">
+                        Los productos serán enviados a este correo
+                    </small>
                 </div>
-                <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion" value="proceder">PAGAR</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" value="proceder" name="btnAccion">
+                    Proceder a pagar
+                </button>
             </form>
         </td>
     </tr>
+
+
+
     </tbody>
 </table>
 <?php }else{  ?>

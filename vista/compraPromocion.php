@@ -9,7 +9,7 @@ include 'cabecera.php';
 <br>
     <?php if($mensaje !="") {  ?>
     <div class="alert alert-success" >
-
+        
         <a href="mostrarCarrito.php" class="link-success">Ver Carrito</a>
     </div>
 <?php }?>
@@ -19,9 +19,7 @@ include 'cabecera.php';
             $daoPromocion = new daoPromocion();
         $promo = $daoPromocion->buscarPromo($id);
     ?>
-    <?php
-    var_dump($promo[0]);
-    ?>
+
     <div class="row">
         <div class="col-3">
             <div class="card">
