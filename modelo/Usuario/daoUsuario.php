@@ -158,6 +158,21 @@ class daoUsuario{
         }
     }
 
+    public function buscarPorId($Id){
+        $sql = "SELECT * FROM usuario WHERE CodUsuario=:id";
+        $cn = new Conexion();
+        $dbh = $cn->getConexion();
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindParam(':id',$Id);
+        $stmt->execute();
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($usuario){
+            return $usuario;
+        }else{
+            return false;
+        }
+    }
+
     public function UsuarioYEmpresa($idUser, $rol){
         if($rol == "Empleado"){
             $sql = "SELECT usu.*, empre.* FROM empresa empre INNER JOIN usuario usu ON usu.CodEmpresa = empre.CodEmpresa 
@@ -196,6 +211,17 @@ class daoUsuario{
         $stmt->execute();
         $canNom = $stmt->fetch();
         return $canNom;
+    }
+
+    public function listaEmpleados($empresa){
+        $sql = "SELECT * FROM usuario WHERE CodEmpresa=:empresa AND CodRol = 4";
+        $cn = new Conexion();
+        $dbh = $cn->getConexion();
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindParam(':empresa',$empresa);
+        $stmt->execute();
+        $empleados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $empleados;
     }
 
 }
