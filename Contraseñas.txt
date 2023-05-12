@@ -1,0 +1,4 @@
+Admin = xander798b@gmail.com - xanderAdminUdb
+Empresa = jeanDisneyEmpresa@gmail.com - disney234empresa
+Cliente = angelMart112@gmail.com - eliseoCliente1433
+Empleado = riveraAdaRom@gmail.com - empleadoRivera456
