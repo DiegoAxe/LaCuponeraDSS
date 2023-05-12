@@ -88,6 +88,7 @@
                                 $_SESSION['Correo'] = $usuario['Correo'];
                                 $_SESSION['CodRol'] = $usuario['CodRol'];
                                 $_SESSION['Rol'] = 'Empresa';
+                                $_SESSION['CodEmpresa'] = $usuario['CodEmpresa'];
                                 $_SESSION['Verificado'] = $usuario['Verificado'];
                                 header('location: ../vista/index.php');
                                 break;
